@@ -1,0 +1,289 @@
+/************************************************************
+GENERAL
+************************************************************/
+
+body {
+	font-family: 'Armata', sans-serif;
+	margin: 0px;
+	color: #fff;
+	font-size: 1em;
+	background: #1c1c1c; /* Old browsers */
+	background: -moz-linear-gradient(top, #1c1c1c 0%, #4f4f4f 40%, #000000 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1c1c1c), color-stop(40%,#4f4f4f), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #1c1c1c 0%,#4f4f4f 40%,#000000 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #1c1c1c 0%,#4f4f4f 40%,#000000 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #1c1c1c 0%,#4f4f4f 40%,#000000 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #1c1c1c 0%,#4f4f4f 40%,#000000 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c1c1c', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+#wrapper {
+	clear: both;
+	max-width: 940px;
+	margin: 0px auto 0px;
+	padding: 0px 2.5% 0px;
+}
+
+p {
+	margin: 0px;
+	padding: 1em 0px;
+	line-height: 1.5em;
+}
+
+p.help {
+	display: none;
+	margin: -20px 0px 10px;
+	padding: 1em 0px;
+	font-size: 0.75em;
+	line-height: 1.5em;
+}
+
+p.help em {
+	color: #aaa;
+}
+
+a, a:hover, a:active, a:visited {
+	color: #eaa724;
+}
+
+h1 {
+	text-align: center;
+	font-size: 2em;
+	margin: 0px;
+	color: #fff;
+}
+
+h2 {
+	text-align: center;
+	font-size: 1.5em;
+	margin: 1em 0px;
+	color: #fff;
+}
+
+pre {
+	font-family: 'courier', monospace;
+	font-size: 0.75em;
+	width: 95%;
+	margin: 10px 0px 20px;
+	padding: 2.5%;
+	background-color: #fff;
+	border-style: solid;
+	border-color: #fff;
+	border-width: 2px;
+	border-radius: 10px;
+	color: #000;
+}
+
+/************************************************************
+HEADER
+************************************************************/
+
+header {
+	clear: both;
+	width: 100%;
+	margin: 0px auto 0px;
+	padding: 0px;
+	background-color: #000;
+	border-bottom: 4px solid #303030;
+}
+
+div.logo {
+	max-width: 940px;
+	margin: 0px auto 0px;
+	padding: 20px 0px 0px;
+}
+
+div.logo img {
+	vertical-align: -14px;
+	margin-right: 0.5em;
+}
+
+header a {
+	text-decoration: none;
+}
+
+header a h1 {
+	text-align: center;
+	font-size: 2em;
+	margin: 0px;
+	color: #fff;
+}
+
+/************************************************************
+NAVIGATION
+************************************************************/
+
+nav {
+	text-align: center;
+	max-width: 940px;
+	margin: 0px auto 0px;
+	padding: 0px;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0px;
+	display: block;
+}
+
+nav li {
+	display: block;
+	margin: 0px 2.5%;
+}
+
+nav a, nav a:visited {
+	display: block;
+	background-color: #eaa724;
+	border-style: none;
+	border-color: #fff;
+	border-width: 2px;
+	border-radius: 8px;
+	cursor: pointer;
+	color: #000;
+	font-size: 1em;
+	font-weight: normal;
+	padding: 1em;
+	margin: 10px 0px 0px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+nav a:hover, nav a:active {
+	background-color: #ffcb05;
+}
+
+/************************************************************
+SECTION: BRIEFINGFORM
+************************************************************/
+
+div.briefingForm fieldset {
+	background-color: #0f0f0f;
+	border-style: solid;
+	border-color: #eaa724;
+	border-width: 2px;
+	border-radius: 8px;
+	margin: 20px 0px;
+	padding: 2.5% 5%;
+}
+
+div.briefingForm legend {
+	background-color: #000;
+	border-style: solid;
+	border-color: #eaa724;
+	border-width: 2px;
+	border-radius: 8px;
+	padding: 0.5em 0.5em;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+
+div.briefingForm label {
+	display: inline-block;
+	padding: 0px;
+	font-size: 1.2em;
+}
+
+div.briefingForm select {
+	font-family: inherit;
+	margin: 10px 0px 20px;
+	padding: 0.5em 1em;
+	width: 95%;
+	font-size: 1em;
+	font-weight: 400;
+	color: #aaa;
+	background-color: #303030;
+}
+
+div.briefingForm textarea {
+	font-family: inherit;
+	font-size: 1em;
+	width: 95%;
+	margin: 10px 0px 20px;
+	padding: 2.5%;
+	background-color: #fff;
+	border-style: solid;
+	border-color: #fff;
+	border-width: 2px;
+	border-radius: 10px;
+	color: #000;
+}
+
+div.briefingForm input[type=text] {
+	font-family: inherit;
+	font-size: 1em;
+	width: 95%;
+	margin: 10px 0px 20px;
+	padding: 2.5%;
+	background-color: #fff;
+	border-style: solid;
+	border-color: #fff;
+	border-width: 2px;
+	border-radius: 10px;
+	color: #000;
+}
+
+.formatter {
+	font-family: inherit;
+	background-color: #333;
+	border-style: none;
+	border-color: #fff;
+	border-width: 2px;
+	border-radius: 8px;
+	display: inline-block;
+	cursor: pointer;
+	color: #fff;
+	font-size: 0.8em;
+	font-weight: normal;
+	padding: 0.5em 1em;
+	margin: 10px 0px 0px;
+	margin-right: 0.5em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.formatter:hover {
+	background-color: #666;
+}
+.formatter:active {
+	background-color: #666;
+}
+
+.formButton {
+	font-family: inherit;
+	background-color: #eaa724;
+	border-style: none;
+	border-color: #fff;
+	border-width: 2px;
+	border-radius: 8px;
+	display: inline-block;
+	cursor: pointer;
+	color: #000;
+	font-size: 1em;
+	font-weight: normal;
+	padding: 1em;
+	margin: 10px 0px 0px;
+	width: 100%;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.formButton:hover {
+	background-color: #ffcb05;
+}
+.formButton:active {
+	background-color: #ffcb05;
+}
+
+/************************************************************
+FOOTER
+************************************************************/
+
+footer {
+	clear: both;
+	max-width: 940px;
+	margin: 0px auto 0px;
+	padding: 20px 2.5% 0px;
+}
+
+footer p {
+	font-size: 0.8em;
+	color: #999;
+}
