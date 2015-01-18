@@ -179,10 +179,10 @@
 							<input type="button" value="Link Marker" class="formatter" onclick="insertAtCursor(admin);" /><input type="button" value="Toggle Help" class="formatter" onclick="toggle_visibility('help_admin');" /><br/>
 							<textarea name="admin" id="admin" rows="2"></textarea>
 							<br/>
-							<p class="help" id="help_admin">There are no pre-defined sub-headings for this tab, but commonly covered topics include vehicles and special equipment (or lack thereof). Example: <br/><br/><em>VEHICLES<br/>
+							<p class="help" id="help_admin">There are no pre-defined sub-headings for this tab, but commonly covered topics include vehicles and special equipment (or lack thereof). Example (remember to include the font tags to correctly style sub-headings): <br/><br/><em>&lt;font size='18'&gt;VEHICLES&lt;/font&gt;<br/>
 Each squad begins pre-mounted in a truck. CO, DC and attachments begin pre-mounted in their own trucks.
 <br/><br/>
-SMOKE ROUNDS<br/>
+&lt;font size='18'&gt;SMOKE ROUNDS&lt;/font&gt;<br/>
 All SLs and FTLs have been issued with extra smoke rounds for their UGLs.</em></p>
 
 
@@ -297,25 +297,25 @@ _adm = player createDiaryRecord ["diary", ["Administration","
 _exe = player createDiaryRecord ["diary", ["Execution","
 <?php if ($exec_intent != "") { ?>
 &lt;br/&gt;
-COMMANDER'S INTENT
+&lt;font size='18'&gt;COMMANDER'S INTENT&lt;/font&gt;
 &lt;br/&gt;
 <?php echo stripslashes($exec_intent) . "\n"; ?>
 <?php } ?>
 <?php if ($exec_movement != "") { ?>
 &lt;br/&gt;&lt;br/&gt;
-MOVEMENT PLAN
+&lt;font size='18'&gt;MOVEMENT PLAN&lt;/font&gt;
 &lt;br/&gt;
 <?php echo stripslashes($exec_movement) . "\n"; ?>
 <?php } ?>
 <?php if ($exec_fire != "") { ?>
 &lt;br/&gt;&lt;br/&gt;
-FIRE SUPPORT PLAN
+&lt;font size='18'&gt;FIRE SUPPORT PLAN&lt;/font&gt;
 &lt;br/&gt;
 <?php echo stripslashes($exec_fire) . "\n"; ?>
 <?php } ?>
 <?php if ($exec_special != "") { ?>
 &lt;br/&gt;&lt;br/&gt;
-SPECIAL TASKS
+&lt;font size='18'&gt;SPECIAL TASKS&lt;/font&gt;
 &lt;br/&gt;
 <?php echo stripslashes($exec_special) . "\n"; ?>
 <?php } ?>
@@ -347,13 +347,13 @@ _sit = player createDiaryRecord ["diary", ["Situation","
 <?php } ?>
 <?php if ($situ_enemy != "") { ?>
 &lt;br/&gt;&lt;br/&gt;
-ENEMY FORCES
+&lt;font size='18'&gt;ENEMY FORCES&lt;/font&gt;
 &lt;br/&gt;
 <?php echo stripslashes($situ_enemy) . "\n"; ?>
 <?php } ?>
 <?php if ($situ_friendly != "") { ?>
 &lt;br/&gt;&lt;br/&gt;
-FRIENDLY FORCES
+&lt;font size='18'&gt;FRIENDLY FORCES&lt;/font&gt;
 &lt;br/&gt;
 <?php echo stripslashes($situ_friendly) . "\n"; ?>
 <?php } ?>
