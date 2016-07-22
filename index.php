@@ -2,15 +2,15 @@
 
 <!DOCTYPE html>
 <html>
-	
+
 	<!-- NOTE: The head is an include file. -->
 	<?php include("inc/head.php") ?>
 
-	<body> 
-		
+	<body>
+
 		<!-- NOTE: The header is an include file. -->
 		<?php include("inc/header.php") ?>
-		
+
 		<!-- NOTE: The wrapper div is centered via CSS. -->
 		<div id="wrapper">
 
@@ -19,12 +19,12 @@
 			<?php
 			if ($_SERVER["REQUEST_METHOD"] != "POST") { ?>
 
-			<script type="text/javascript"> 
+			<script type="text/javascript">
 			// Author: http://alexking.org/blog/2003/06/02/inserting-at-the-cursor-using-javascript
 			// Modified so it's safe across browser windows
 			// Modified again to support this page (a web-editor for Arma 3 briefing files in F3)
 			function insertAtCursor(myField) {
-			  
+
 			  var linkText = prompt('Enter the word(s) to link:','');
 			  var markerName = prompt('Enter the name of the marker:','');
 
@@ -41,7 +41,7 @@
 			    var endPos = myField.selectionEnd;
 			    myField.value = myField.value.substring(0, startPos) + "<marker name = '" + markerName + "'>" + linkText + "</marker>"
 			    				+ myField.value.substring(endPos, myField.value.length);
-			  } 
+			  }
 			  // fallback to appending it to the field
 			  else {
 			    myField.value += myValue;
@@ -76,16 +76,19 @@
 				<form method="post" action="index.php">
 
 					<fieldset>
-						<legend align="left">General</legend>	
+						<legend align="left">General</legend>
 
 							<label for="faction">Faction</label><br/>
 							<select name="faction" id="faction">
 								<optgroup label="BLUFOR">
-									<option value="NATO">NATO</option>
+									<option value="CTRG">CTRG</option>
 									<option value="FIA">FIA</option>
+									<option value="GENDARMERIE">Gendarmerie</option>
+									<option value="NATO">NATO</option>
 								</optgroup>
 								<optgroup label="INDFOR">
 									<option value="AAF">AAF</option>
+									<option value="SYNDIKAT">Syndikat</option>
 								</optgroup>
 								<optgroup label="OPFOR">
 									<option value="CSAT">CSAT</option>
@@ -98,7 +101,7 @@
 					</fieldset>
 
 					<fieldset>
-						<legend align="left">Situation Tab</legend>	
+						<legend align="left">Situation Tab</legend>
 
 							<label for="situ_overall">Situation</label><br/>
 							<input type="button" value="Link Marker" class="formatter" onclick="insertAtCursor(situ_overall);" />
@@ -124,7 +127,7 @@
 					</fieldset>
 
 					<fieldset>
-						<legend align="left">Mission Tab</legend>	
+						<legend align="left">Mission Tab</legend>
 
 							<label for="mission">Mission</label><br/>
 							<input type="button" value="Link Marker" class="formatter" onclick="insertAtCursor(mission);" />
@@ -136,7 +139,7 @@
 					</fieldset>
 
 					<fieldset>
-						<legend align="left">Execution Tab</legend>	
+						<legend align="left">Execution Tab</legend>
 
 							<label for="exec_intent">Commander's Intent</label><br/>
 							<input type="button" value="Link Marker" class="formatter" onclick="insertAtCursor(exec_intent);" />
@@ -173,7 +176,7 @@
 					</fieldset>
 
 					<fieldset>
-						<legend align="left">Administration Tab</legend>	
+						<legend align="left">Administration Tab</legend>
 
 							<label for="admin">Administration</label><br/>
 							<input type="button" value="Link Marker" class="formatter" onclick="insertAtCursor(admin);" /><input type="button" value="Toggle Help" class="formatter" onclick="toggle_visibility('help_admin');" /><br/>
@@ -189,7 +192,7 @@ All SLs and FTLs have been issued with extra smoke rounds for their UGLs.</em></
 					</fieldset>
 
 					<fieldset>
-						<legend align="left">Credits Tab</legend>	
+						<legend align="left">Credits Tab</legend>
 
 							<label for="credits">Credits</label><br/>
 							<input type="button" value="Link Marker" class="formatter" onclick="insertAtCursor(credits);" />
@@ -202,7 +205,7 @@ All SLs and FTLs have been issued with extra smoke rounds for their UGLs.</em></
 					</fieldset>
 
 					<input type="submit" value="Generate Briefing Code" class="formButton">
-				
+
 				</form>
 
 			</div>
@@ -366,7 +369,7 @@ _sit = player createDiaryRecord ["diary", ["Situation","
 			<?php } ?>
 
 		</div>
-		
+
 		<!-- NOTE: The footer is an include file. -->
 		<?php include("inc/footer.php") ?>
 
