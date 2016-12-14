@@ -1,6 +1,6 @@
 /************************************************************
 GENERAL
-************************************************************/
+ ************************************************************/
 
 body {
 	font-family: 'Armata', sans-serif;
@@ -15,6 +15,20 @@ body {
 	background: -ms-linear-gradient(top, #1c1c1c 0%,#4f4f4f 40%,#000000 100%); /* IE10+ */
 	background: linear-gradient(to bottom, #1c1c1c 0%,#4f4f4f 40%,#000000 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c1c1c', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+* {
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;          /* Likely future */
+}
+
+.all-copy {
+	-webkit-user-select: all;  /* Chrome all / Safari all */
+	-moz-user-select: all;     /* Firefox all */
+	-ms-user-select: all;      /* IE 10+ */
+	user-select: all;          /* Likely future */
 }
 
 #wrapper {
@@ -76,7 +90,7 @@ pre {
 
 /************************************************************
 HEADER
-************************************************************/
+ ************************************************************/
 
 header {
 	clear: both;
@@ -111,7 +125,7 @@ header a h1 {
 
 /************************************************************
 NAVIGATION
-************************************************************/
+ ************************************************************/
 
 nav {
 	text-align: center;
@@ -154,7 +168,10 @@ nav a:hover, nav a:active {
 
 /************************************************************
 SECTION: BRIEFINGFORM
-************************************************************/
+ ************************************************************/
+div.briefingForm {
+	padding-bottom: 100px;
+}
 
 div.briefingForm fieldset {
 	background-color: #0f0f0f;
@@ -274,7 +291,7 @@ div.briefingForm input[type=text] {
 
 /************************************************************
 FOOTER
-************************************************************/
+ ************************************************************/
 
 footer {
 	clear: both;

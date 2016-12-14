@@ -76,27 +76,14 @@
 				<form method="post" action="index.php">
 
 					<fieldset>
-						<legend align="left">General</legend>
+						<legend align="left">Mission Tab</legend>
 
-							<label for="faction">Faction</label><br/>
-							<select name="faction" id="faction">
-								<optgroup label="BLUFOR">
-									<option value="CTRG">CTRG</option>
-									<option value="FIA">FIA</option>
-									<option value="GENDARMERIE">Gendarmerie</option>
-									<option value="NATO">NATO</option>
-								</optgroup>
-								<optgroup label="INDFOR">
-									<option value="AAF">AAF</option>
-									<option value="SYNDIKAT">Syndikat</option>
-								</optgroup>
-								<optgroup label="OPFOR">
-									<option value="CSAT">CSAT</option>
-								</optgroup>
-								<optgroup label="CIVILIAN">
-									<option value="CIV">CIV</option>
-								</optgroup>
-							</select>
+							<label for="mission">Mission</label><br/>
+							<input type="button" value="Link Marker" class="formatter" onclick="insertAtCursor(mission);" />
+							<input type="button" value="Toggle Help" class="formatter" onclick="toggle_visibility('help_mission');" /><br/>
+							<textarea name="mission" id="mission" rows="2"></textarea>
+							<br/>
+							<p class="help" id="help_mission">The words on this tab must convey the primary objective of the mission (and no more) in the most concise manner possible. For simple missions, aim for a single sentence. Example: <em>Recapture the outpost at Camp Rogain.</em></p>
 
 					</fieldset>
 
@@ -127,71 +114,6 @@
 					</fieldset>
 
 					<fieldset>
-						<legend align="left">Mission Tab</legend>
-
-							<label for="mission">Mission</label><br/>
-							<input type="button" value="Link Marker" class="formatter" onclick="insertAtCursor(mission);" />
-							<input type="button" value="Toggle Help" class="formatter" onclick="toggle_visibility('help_mission');" /><br/>
-							<textarea name="mission" id="mission" rows="2"></textarea>
-							<br/>
-							<p class="help" id="help_mission">The words on this tab must convey the primary objective of the mission (and no more) in the most concise manner possible. For simple missions, aim for a single sentence. Example: <em>Recapture the outpost at Camp Rogain.</em></p>
-
-					</fieldset>
-
-					<fieldset>
-						<legend align="left">Execution Tab</legend>
-
-							<label for="exec_intent">Commander's Intent</label><br/>
-							<input type="button" value="Link Marker" class="formatter" onclick="insertAtCursor(exec_intent);" />
-							<input type="button" value="Toggle Help" class="formatter" onclick="toggle_visibility('help_exec_intent');" /><br/>
-							<textarea name="exec_intent" id="exec_intent" rows="2"></textarea>
-							<br/>
-							<p class="help" id="help_exec_intent">Provide the players with an idea of how they should aim to complete the mission. Example: <em>Suppress the enemy position with smoke and grenade fire before assaulting it.</em></p>
-
-
-							<label for="exec_movement">Movement Plan</label><br/>
-							<input type="button" value="Link Marker" class="formatter" onclick="insertAtCursor(exec_movement);" />
-							<input type="button" value="Toggle Help" class="formatter" onclick="toggle_visibility('help_exec_movement');" /><br/>
-							<textarea name="exec_movement" id="exec_movement" rows="2"></textarea>
-							<br/>
-							<p class="help" id="help_exec_movement">Outline any specific orders for moving the players around the map. Example: <em>All infantry squads move by truck to the road north of the camp, dismount and hold there until the enemy outpost has been suppressed, then assault the enemy positions directly (on foot).</em></p>
-
-
-							<label for="exec_fire">Fire Support Plan</label><br/>
-							<input type="button" value="Link Marker" class="formatter" onclick="insertAtCursor(exec_fire);" />
-							<input type="button" value="Toggle Help" class="formatter" onclick="toggle_visibility('help_exec_fire');" /><br/>
-							<textarea name="exec_fire" id="exec_fire" rows="2"></textarea>
-							<br/>
-							<p class="help" id="help_exec_fire">Identify any long range or artillery assets at the players' disposal (these could be player operated, or scripted). Example: <em>The CO can use his radio to request smoke rounds from the nearby firebase.</em></p>
-
-
-							<label for="exec_special">Special Tasks</label><br/>
-							<input type="button" value="Link Marker" class="formatter" onclick="insertAtCursor(exec_special);" />
-							<input type="button" value="Toggle Help" class="formatter" onclick="toggle_visibility('help_exec_special');" /><br/>
-							<textarea name="exec_special" id="exec_special" rows="2"></textarea>
-							<br/>
-							<p class="help" id="help_exec_special">Outline any specific actions the players must perform. Example: <em>Destroy the enemy tank using AT rocket fire.</em></p>
-
-
-					</fieldset>
-
-					<fieldset>
-						<legend align="left">Administration Tab</legend>
-
-							<label for="admin">Administration</label><br/>
-							<input type="button" value="Link Marker" class="formatter" onclick="insertAtCursor(admin);" /><input type="button" value="Toggle Help" class="formatter" onclick="toggle_visibility('help_admin');" /><br/>
-							<textarea name="admin" id="admin" rows="2"></textarea>
-							<br/>
-							<p class="help" id="help_admin">There are no pre-defined sub-headings for this tab, but commonly covered topics include vehicles and special equipment (or lack thereof). Example (remember to include the font tags to correctly style sub-headings): <br/><br/><em>&lt;font size='18'&gt;VEHICLES&lt;/font&gt;<br/>
-Each squad begins pre-mounted in a truck. CO, DC and attachments begin pre-mounted in their own trucks.
-<br/><br/>
-&lt;font size='18'&gt;SMOKE ROUNDS&lt;/font&gt;<br/>
-All SLs and FTLs have been issued with extra smoke rounds for their UGLs.</em></p>
-
-
-					</fieldset>
-
-					<fieldset>
 						<legend align="left">Credits Tab</legend>
 
 							<label for="credits">Credits</label><br/>
@@ -212,161 +134,113 @@ All SLs and FTLs have been issued with extra smoke rounds for their UGLs.</em></
 
 			<?php } else {
 
-				$faction = $_POST["faction"];
 				$situ_overall = $_POST["situ_overall"];
 				$situ_friendly = $_POST["situ_friendly"];
 				$situ_enemy = $_POST["situ_enemy"];
 				$mission = $_POST["mission"];
-				$exec_intent = $_POST["exec_intent"];
-				$exec_movement = $_POST["exec_movement"];
-				$exec_fire = $_POST["exec_fire"];
-				$exec_special = $_POST["exec_special"];
-				$admin = $_POST["admin"];
 				$credits = $_POST["credits"];
 
 				include("inc/fnc_clean.php");
 
-				$situ_overall = clean ($situ_overall);
-				$situ_friendly = clean ($situ_friendly);
-				$situ_enemy = clean ($situ_enemy);
-				$mission = clean ($mission);
-				$exec_intent = clean ($exec_intent);
-				$exec_movement = clean ($exec_movement);
-				$exec_fire = clean ($exec_fire);
-				$exec_special = clean ($exec_special);
-				$admin = clean ($admin);
-				$credits = clean ($credits);
+				$situ_overall = clean($situ_overall);
+				$situ_friendly = clean($situ_friendly);
+				$situ_enemy = clean($situ_enemy);
+				$mission = clean($mission);
+				$credits = clean($credits);
 
-				?>
+            } ?>
 
-<p>Use the code below to replace ALL the code in the file: <strong>f/briefing/f_briefing_<?php echo strtolower($faction); ?>.sqf</strong></p>
+<?php
+$briefing = <<<'CONTENT'
+CONTENT;
 
-<pre>
-
-// F3 - Briefing
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-// ====================================================================================
-
-// FACTION: <?php echo $faction . "\n"; ?>
-
-// ====================================================================================
-
-// TASKS
-// The code below creates tasks. Two (commented-out) sample tasks are included.
-// Note: tasks should be entered into this file in reverse order.
-
-// _task2 = player createSimpleTask ["OBJ_2"];
-// _task2 setSimpleTaskDescription ["IN DEPTH OBJECTIVE DESCRIPTION", "SHORT OBJECTIVE DESCRIPTION", "WAYPOINT TEXT"];
-// _task2 setSimpleTaskDestination WAYPOINTLOCATION;
-// _task2 setTaskState "Created";
-
-// _task1 = player createSimpleTask ["OBJ_1"];
-// _task1 setSimpleTaskDescription ["IN DEPTH OBJECTIVE DESCRIPTION", "SHORT OBJECTIVE DESCRIPTION", "WAYPOINT TEXT"];
-// _task1 setSimpleTaskDestination WAYPOINTLOCATION;
-// _task1 setTaskState "Created";
-
-<?php if ($credits != "") { ?>
-// ====================================================================================
-
-// NOTES: CREDITS
-// The code below creates the administration sub-section of notes.
-
-_cre = player createDiaryRecord ["diary", ["Credits","
-&lt;br/&gt;
-<?php echo stripslashes($credits) . "\n"; ?>
-&lt;br/&gt;&lt;br/&gt;
-Made with F3 (http://www.ferstaberinde.com/f3/en/)
-"]];
-<?php } ?>
-
-<?php if ($admin != "") { ?>
-// ====================================================================================
-
-// NOTES: ADMINISTRATION
-// The code below creates the administration sub-section of notes.
-
-_adm = player createDiaryRecord ["diary", ["Administration","
-&lt;br/&gt;
-<?php echo stripslashes($admin) . "\n"; ?>
-"]];
-<?php } ?>
-
-<?php if ($exec_intent != "" OR $exec_movement != "" OR $exec_fire != "" OR $exec_special != "") { ?>
-// ====================================================================================
-
-// NOTES: EXECUTION
-// The code below creates the execution sub-section of notes.
-
-_exe = player createDiaryRecord ["diary", ["Execution","
-<?php if ($exec_intent != "") { ?>
-&lt;br/&gt;
-&lt;font size='18'&gt;COMMANDER'S INTENT&lt;/font&gt;
-&lt;br/&gt;
-<?php echo stripslashes($exec_intent) . "\n"; ?>
-<?php } ?>
-<?php if ($exec_movement != "") { ?>
-&lt;br/&gt;&lt;br/&gt;
-&lt;font size='18'&gt;MOVEMENT PLAN&lt;/font&gt;
-&lt;br/&gt;
-<?php echo stripslashes($exec_movement) . "\n"; ?>
-<?php } ?>
-<?php if ($exec_fire != "") { ?>
-&lt;br/&gt;&lt;br/&gt;
-&lt;font size='18'&gt;FIRE SUPPORT PLAN&lt;/font&gt;
-&lt;br/&gt;
-<?php echo stripslashes($exec_fire) . "\n"; ?>
-<?php } ?>
-<?php if ($exec_special != "") { ?>
-&lt;br/&gt;&lt;br/&gt;
-&lt;font size='18'&gt;SPECIAL TASKS&lt;/font&gt;
-&lt;br/&gt;
-<?php echo stripslashes($exec_special) . "\n"; ?>
-<?php } ?>
-"]];
-<?php } ?>
-
-<?php if ($mission != "") { ?>
+if ($mission != "") {
+    $briefing .= <<<CONTENT
 // ====================================================================================
 
 // NOTES: MISSION
 // The code below creates the mission sub-section of notes.
 
 _mis = player createDiaryRecord ["diary", ["Mission","
-&lt;br/&gt;
-<?php echo stripslashes($mission) . "\n"; ?>
+<br/>
+$mission
 "]];
-<?php } ?>
+<br/>
+CONTENT;
+}
 
-<?php if ($situ_overall != "" OR $situ_enemy != "" OR $situ_friendly != "") { ?>
+if ($situ_overall != "" OR $situ_enemy != "" OR $situ_friendly != "") {
+    $briefing .= <<<CONTENT
 // ====================================================================================
 
 // NOTES: SITUATION
 // The code below creates the situation sub-section of notes.
 
 _sit = player createDiaryRecord ["diary", ["Situation","
-<?php if ($situ_overall != "") { ?>
-&lt;br/&gt;
-<?php echo stripslashes($situ_overall) . "\n"; ?>
-<?php } ?>
-<?php if ($situ_enemy != "") { ?>
-&lt;br/&gt;&lt;br/&gt;
-&lt;font size='18'&gt;ENEMY FORCES&lt;/font&gt;
-&lt;br/&gt;
-<?php echo stripslashes($situ_enemy) . "\n"; ?>
-<?php } ?>
-<?php if ($situ_friendly != "") { ?>
-&lt;br/&gt;&lt;br/&gt;
-&lt;font size='18'&gt;FRIENDLY FORCES&lt;/font&gt;
-&lt;br/&gt;
-<?php echo stripslashes($situ_friendly) . "\n"; ?>
-<?php } ?>
+CONTENT;
+
+    if ($situ_overall != "") {
+        $briefing .= <<<CONTENT
+<br/>
+$situ_overall
+CONTENT;
+    }
+
+    if ($situ_enemy != "") {
+        $briefing .= <<<CONTENT
+<br/>
+&lt;font size="18"&gt;ENEMY FORCES&lt;/font&gt;
+<br/>
+$situ_enemy
+CONTENT;
+    }
+    if ($situ_friendly != "") {
+        $briefing .= <<<CONTENT
+<br/>
+&lt;font size="18"&gt;FRIENDLY FORCES&lt;/font&gt;
+<br/>
+$situ_friendly
+CONTENT;
+    }
+    $briefing .= <<<CONTENT
+<br/>
 "]];
-<?php } ?>
+<br/>
+CONTENT;
+}
 
+
+if ($credits != "") {
+    $briefing .= <<<CONTENT
 // ====================================================================================
-</pre>
 
-			<?php } ?>
+// NOTES: CREDITS
+// The code below creates the administration sub-section of notes.
+
+_cre = player createDiaryRecord ["diary", ["Credits","
+<br/>
+$credits
+<br/>
+Made with qipTPL Webtools (with modyfied version of F3 Webtools)
+"]];
+CONTENT;
+}
+
+?>
+
+
+<?php if ($_SERVER["REQUEST_METHOD"] == "POST") {?>
+
+<!-- <form method="POST" action="createfile.php"> -->
+<!--     <input type="hidden" name="briefing" value='<?php echo $briefing;?>'/> -->
+<!--     <input type="submit" name="download" value="submit"/> -->
+<!-- </form> -->
+
+<p>Use the code below to replace ALL the code in the file: <strong>qipTPL/config/briefing.sqf</strong></p>
+<pre class="all-copy">
+<?php echo $briefing;?>
+</pre>
+<?php } ?>
 
 		</div>
 
