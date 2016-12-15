@@ -1,12 +1,12 @@
 <head>
 	<meta charset="utf-8">
 	<html lang="en">
-	<title>F3 Web Tools - <?php echo $pageTitle; ?></title>
+	<title>qipTPL Web Tools - <?php echo $pageTitle; ?></title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link href='//fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/responsive.css">
-	<!-- <meta name="viewport" content"width=device-width, initial-scale=1.0"> -->
+	<meta name="viewport" content"width=device-width, initial-scale=1.0">
 	<meta name="viewport" content="initial-scale=1.0">
 	<!-- <!&#45;&#45; Google Analytics tracking code (Account: F3, Property: F3 Web Tools) &#45;&#45;> -->
 	<!-- <script> -->

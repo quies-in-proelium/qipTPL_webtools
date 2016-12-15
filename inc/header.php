@@ -8,7 +8,7 @@
 	<nav>
 		<ul>
 			<li><a href="index.php">Briefing Code Generator</a></li>
-			<li><a href="debriefings.php">Debriefings Code Generator</a></li>
+			<!-- <li><a href="debriefings.php">Debriefings Code Generator</a></li> -->
 		</ul>
 	</nav>
 </header>
