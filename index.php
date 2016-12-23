@@ -73,7 +73,7 @@
 
 			<div class="briefingForm">
 
-				<form method="post" action="index.php">
+				<form method="post" action="">
 
 					<fieldset>
 						<legend align="left">Mission Tab</legend>
@@ -162,66 +162,67 @@ if ($mission != "") {
 // The code below creates the mission sub-section of notes.
 
 _mis = player createDiaryRecord ["diary", ["Mission","
-<br/>
 $mission
 "]];
-<br/>
 CONTENT;
 }
 
 if ($situ_overall != "" OR $situ_enemy != "" OR $situ_friendly != "") {
     $briefing .= <<<CONTENT
+
+
 // ====================================================================================
 
 // NOTES: SITUATION
 // The code below creates the situation sub-section of notes.
 
 _sit = player createDiaryRecord ["diary", ["Situation","
+
 CONTENT;
 
     if ($situ_overall != "") {
         $briefing .= <<<CONTENT
-<br/>
 $situ_overall
+&lt;br/&gt;
 CONTENT;
     }
 
     if ($situ_enemy != "") {
         $briefing .= <<<CONTENT
-<br/>
-&lt;font size="18"&gt;ENEMY FORCES&lt;/font&gt;
-<br/>
+&lt;br/&gt;
+&lt;font size='18'&gt;ENEMY FORCES&lt;/font&gt;&lt;br/&gt;
 $situ_enemy
+&lt;br/&gt;
 CONTENT;
     }
     if ($situ_friendly != "") {
         $briefing .= <<<CONTENT
-<br/>
-&lt;font size="18"&gt;FRIENDLY FORCES&lt;/font&gt;
-<br/>
+&lt;br/&gt;
+&lt;font size='18'&gt;FRIENDLY FORCES&lt;/font&gt;&lt;br/&gt;
 $situ_friendly
 CONTENT;
     }
     $briefing .= <<<CONTENT
-<br/>
+&lt;br/&gt;
 "]];
-<br/>
 CONTENT;
 }
 
 
 if ($credits != "") {
     $briefing .= <<<CONTENT
+
+
 // ====================================================================================
 
 // NOTES: CREDITS
 // The code below creates the administration sub-section of notes.
 
 _cre = player createDiaryRecord ["diary", ["Credits","
-<br/>
 $credits
-<br/>
-Made with qipTPL Webtools (with modyfied version of F3 Webtools)
+&lt;br/&gt;
+&lt;br/&gt;
+Made with qipTPL Webtools (a modified version of F3 Webtools)
 "]];
 CONTENT;
 }
